@@ -1,0 +1,19 @@
+﻿<Window x:Class="MythWeaverSheetReader.LoggedIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Myth-Weavers Sheet Access" Height="328" Width="442"
+        ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="71,15,0,0" Name="label1" Text="Myth-Weaver Sheet List" VerticalAlignment="Top" Width="171" />
+        <TextBlock Height="23" HorizontalAlignment="Right" Margin="0,15,-41,0" Name="label2" Text="Output Filename" VerticalAlignment="Top" Width="171" />
+        <TextBlock Height="16" HorizontalAlignment="Right" Margin="0,125,12,0" Name="labelComplete" Text="Complete!" VerticalAlignment="Top" Visibility="Hidden" Width="56" MouseDown="labelComplete_MouseDown" />
+        <TextBlock Height="23" HorizontalAlignment="Right" Margin="0,65,-42,0" Name="label3" Text="Comparison File" VerticalAlignment="Top" Width="171" />
+        <TextBox Height="256" HorizontalAlignment="Left" Margin="12,33,0,0" Name="sheetBox" VerticalAlignment="Top" Width="257" BorderBrush="Black" IsHitTestVisible="True" Focusable="True" ForceCursor="False" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" FontSize="10" AcceptsReturn="True" TextChanged="sheetBox_TextChanged" />
+        <TextBox AcceptsReturn="False" BorderBrush="Black" ClipToBounds="True" Focusable="True" FontSize="10" ForceCursor="False" Height="20" HorizontalAlignment="Right" HorizontalScrollBarVisibility="Hidden" IsHitTestVisible="True" Margin="0,33,10,0" Name="outputBox" VerticalAlignment="Top" VerticalScrollBarVisibility="Disabled" Width="145" TextChanged="outputBox_TextChanged" />
+        <TextBox AcceptsReturn="False" BorderBrush="Black" ClipToBounds="True" Focusable="True" FontSize="10" ForceCursor="False" Height="20" HorizontalAlignment="Right" HorizontalScrollBarVisibility="Hidden" IsHitTestVisible="True" Margin="0,83,10,0" Name="compareBox" VerticalAlignment="Top" VerticalScrollBarVisibility="Disabled" Width="145" TextChanged="compareBox_TextChanged" />
+        <Button Content="Generate File" Height="24" HorizontalAlignment="Right" Margin="0,121,76,0" Name="buttonGenerate" VerticalAlignment="Top" Width="79" LostFocus="buttonGenerate_LostFocus" Click="buttonGenerate_Click" />
+        <Image Height="10" HorizontalAlignment="Left" Margin="201,19,0,0" x:Name="sheetTooltip" Source="Images/Info-small.png" Stretch="Fill" ToolTip="List the web addresses for your sheets here.&#xA;&#xA;Each address should begin with:&#xA;http://www.myth-weavers.com/sheet.html#id=&#xA;&#xA;Each address must be on a new line." ToolTipService.ShowDuration="9999999" VerticalAlignment="Top" Width="10" />
+        <Image Height="10" HorizontalAlignment="Right" Margin="0,19,28,0" x:Name="outputTooltip" Source="Images/Info-small.png" Stretch="Fill" ToolTip="This file details the results of the comparison.&#xA;&#xA;If left blank, the filename is &quot;MW Sheets&quot;.&#xA;&#xA;The output is an Excel file (XLSX).&#xA;&#xA;This will not overwrite pre-existing files." ToolTipService.ShowDuration="9999999" VerticalAlignment="Top" Width="10" />
+        <Image Height="10" HorizontalAlignment="Right" Margin="0,69,30,0" x:Name="compareTooltip" Source="Images/Info-small.png" Stretch="Fill" ToolTip="This file stores the old sheet data.&#xA;&#xA;If left blank, the filename is &quot;myth-weaver-compare&quot;.&#xA;&#xA;The output is a Text file (TXT).&#xA;&#xA;This will be overwritten by the new sheet data after the comparison." ToolTipService.ShowDuration="9999999" VerticalAlignment="Top" Width="10" />
+    </Grid>
+</Window>
